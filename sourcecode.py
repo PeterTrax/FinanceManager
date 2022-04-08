@@ -22,7 +22,7 @@ Screen:
             MDBottomNavigationItem:
                 name: 'screen 2'
                 text: 'Transactions'
-                icon: 'receipt-outline'
+                icon: 'receipt'
                 id: transactionsScreen
                 on_tab_press: toolBar.title = transactionsScreen.text
     
@@ -36,7 +36,7 @@ Screen:
             MDBottomNavigationItem:
                 name: 'screen4'
                 text: 'Profile'
-                icon: 'face-man-outline'
+                icon: 'face-recognition'
                 id: profileScreen
                 on_tab_press: toolBar.title = profileScreen.text
                 
