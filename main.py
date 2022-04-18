@@ -8,6 +8,12 @@ Window.size = (400, 700)
 
 
 class FinanceManagementApp(MDApp):
+    TransanctionSearchData = { 
+        'Search by date': 'calendar',
+        'Search by category': 'clipboard-list',
+        'Search by amount': 'currency-eur'    
+    }
+
     def build(self):
         screen = Builder.load_string(sourcecode)
         return screen
