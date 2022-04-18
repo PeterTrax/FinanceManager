@@ -25,6 +25,35 @@ Screen:
                 icon: 'receipt'
                 id: transactionsScreen
                 on_tab_press: toolBar.title = transactionsScreen.text
+                
+                MDLabel
+                    text: 'MONTHLY'
+                    font_style: 'H6'
+                    halign:  'center'
+                    pos_hint: { "center_y": .95}
+                MDLabel
+                    text: 'PROCEEDS'
+                    font_style: 'H6'
+                    pos_hint: { "x": .1, "y": .4}
+                MDLabel
+                    id: monthlyProceeds
+                    text: '1000'
+                    font_style: 'H6'
+                    pos_hint: { "x": .15, "y": .35}
+                MDLabel
+                    text: 'EXPENSES'
+                    font_style: 'H6'
+                    pos_hint: { "x": .65, "y": .4}
+                MDLabel
+                    id: monthlyExpenses
+                    text: '1000'
+                    font_style: 'H6'
+                    pos_hint: { "x": .7, "y": .35}
+                
+                MDFloatingActionButtonSpeedDial:
+                    data: app.TransanctionSearchData
+                    root_button_anim: True
+                    icon: 'magnify-plus'
     
             MDBottomNavigationItem:
                 name: 'screen 3'
