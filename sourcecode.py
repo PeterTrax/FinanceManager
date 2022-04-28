@@ -13,57 +13,59 @@ Screen:
         MDBottomNavigation:
 
             MDBottomNavigationItem:
-                name: 'screen 1'
+                name: 'screen1'
                 text: 'Home'
-                icon: "home-outline"
+                icon: 'receipt'
                 id: homeScreen
                 on_tab_press: toolBar.title = homeScreen.text
-    
-            MDBottomNavigationItem:
-                name: 'screen 2'
-                text: 'Transactions'
-                icon: 'receipt'
-                id: transactionsScreen
-                on_tab_press: toolBar.title = transactionsScreen.text
-                
+
                 MDLabel
                     text: 'MONTHLY'
+                    theme_text_color: "Primary"
                     font_style: 'H6'
-                    halign:  'center'
-                    pos_hint: { "center_y": .95}
+                    pos_hint: { "x": .1, "y": .435}
                 MDLabel
                     text: 'PROCEEDS'
+                    theme_text_color: "Primary"
                     font_style: 'H6'
                     pos_hint: { "x": .1, "y": .4}
                 MDLabel
                     id: monthlyProceeds
+                    theme_text_color: "Secondary"
                     text: '1000'
+                    font_style: 'H4'
+                    pos_hint: { "x": .1, "y": .325}
+                MDLabel
+                    text: 'MONTHLY'
+                    theme_text_color: "Primary"
                     font_style: 'H6'
-                    pos_hint: { "x": .15, "y": .35}
+                    pos_hint: { "x": .65, "y": .435}
                 MDLabel
                     text: 'EXPENSES'
+                    theme_text_color: "Primary"
                     font_style: 'H6'
                     pos_hint: { "x": .65, "y": .4}
                 MDLabel
                     id: monthlyExpenses
                     text: '1000'
-                    font_style: 'H6'
-                    pos_hint: { "x": .7, "y": .35}
+                    theme_text_color: "Secondary"
+                    font_style: 'H4'
+                    pos_hint: { "x": .65, "y": .325}
                 
                 MDFloatingActionButtonSpeedDial:
                     data: app.TransanctionSearchData
                     root_button_anim: True
                     icon: 'magnify-plus'
-    
+
             MDBottomNavigationItem:
-                name: 'screen 3'
+                name: 'screen2'
                 text: 'Budgets'
                 icon: 'calculator'
                 id: budgetsScreen
                 on_tab_press: toolBar.title = budgetsScreen.text
             
             MDBottomNavigationItem:
-                name: 'screen4'
+                name: 'screen3'
                 text: 'Profile'
                 icon: 'face-recognition'
                 id: profileScreen
@@ -78,7 +80,8 @@ Screen:
                     text: "Change username-picture"
                     text_color: 0, 0, 1, 1
                     pos_hint: {"center_x": 0.5, "center_y": 0.365}
-                MDFlatButton:
+              
+              MDFlatButton:
                     text: "Change password"
                     text_color: 0, 0, 1, 1
                     pos_hint: {"center_x": 0.5, "center_y": 0.3}
